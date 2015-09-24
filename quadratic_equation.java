@@ -13,8 +13,13 @@ public class quadratic_equation {
     		System.out.println("there's no solution");
     	}
     	else {
+    	    if (D>0) {
       		System.out.println("x1="+x1);
       		System.out.println("x2="+x2);
+    	    }
+    	    else {
+    	       System.out.println("x="+x1);
+    	    }
       	}
     }
 }
