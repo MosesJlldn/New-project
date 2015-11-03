@@ -45,8 +45,11 @@ class Vector{
                 (this.x * vector.getY() - this.y * vector.getX()) + "}");
 	}
 	public String getAbsoluteValue() {
-		return ("{" + this.x + ";" + this.y + ";" + this.z + "}");
-	}
+			return ("{" + this.x + ";" + this.y + ";" + this.z + "}");
+		}
+	public double getModule(){
+        	return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+    	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Type vector1's coordinates by a space, please!");
