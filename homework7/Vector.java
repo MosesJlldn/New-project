@@ -44,7 +44,7 @@ class Vector{
                 (this.z * vector.getX() - this.x * vector.getZ()) + ";" + 
                 (this.x * vector.getY() - this.y * vector.getX()) + "}");
 	}
-	public String getAbsoluteValue() {
+	public String getVector() {
 			return ("{" + this.x + ";" + this.y + ";" + this.z + "}");
 		}
 	public double getModule(){
@@ -64,8 +64,8 @@ class Vector{
 		Vector vector2 = new Vector(x2, y2, z2);
 		//AbsoluteValue
 		System.out.println("Vectors:");
-		System.out.println(vector1.getAbsoluteValue());
-		System.out.println(vector2.getAbsoluteValue());
+		System.out.println(vector1.getVector());
+		System.out.println(vector2.getVector());
 		//Addition
 		System.out.println("Addition = " + vector1.getAddition(vector2));
 		//Subtract
