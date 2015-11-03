@@ -74,6 +74,7 @@ class Vector{
 		System.out.println("ScalarMultiply = " + vector1.getScalarMultiply(vector2));
 		//VectorMultiply
 		System.out.println("VectroMultiply = " + vector1.getVectorMultiply(vector2));
+		System.out.println("VectorModule = " + vector1.getModule());
 	}
 
 }
