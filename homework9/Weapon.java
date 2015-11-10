@@ -22,25 +22,25 @@ class Weapon {
 		else
 			System.out.println("Magazine is full!");
 	}
-	protected void setCaliber(double caliber) {
+	public void setCaliber(double caliber) {
 		this.caliber = caliber;
 	}
-	protected void setMagazine(int magazine) {
+	public void setMagazine(int magazine) {
 		this.magazine = magazine;
 	}
-	protected void setBullets(int bullets) {
+	public void setBullets(int bullets) {
 		this.bullets = bullets;
 	}
-	protected String getType() {
+	public String getType() {
 		return type;
 	}
-	protected double getCaliber() {
+	public double getCaliber() {
 		return caliber;
 	}
-	protected int getMagazine() {
+	public int getMagazine() {
 		return magazine;
 	}
-	protected int getBullets() {
+	public int getBullets() {
 		return bullets;
 	}
 }
