@@ -31,14 +31,9 @@ class Food {
 	public Calendar getBestUntil() {
 		return bestUntil;
 	}
-	public String getFresh() {
+	public boolean getFresh() {
 		Calendar current = Calendar.getInstance();
-		if (this.getBestUntil().before(current)) {
-			return("Fresh");
-		}
-		else {
-			return("Not fresh");
-		}
+		return (this.getBestUntil().before(current));
 	}
 	public boolean equals(Object o) {
 		if (o == null)
@@ -68,6 +63,6 @@ class Food {
 	public String toString() {
 		return ("Name:" + getName() + "." + "\nVolume:" + getVolume() + "." +
 				"\nFats:" + getFats() + "." + "\nProteins:" + getProteins() + "." + 
-				"\nFood is" + getFresh() + ".");
+				"\nFresh:" + getFresh() + ".");
 	}
 }
