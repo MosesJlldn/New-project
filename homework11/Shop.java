@@ -27,6 +27,9 @@ class Shop {
 	public double getTotalWeight() {
 		return totalWeight;
 	}
+	public int getCountM() {
+		return countM;
+	}
 	public void addProduct(int i, Product p) {
 		if (p.getWeight() + this.getTotalWeight() < this.maxWeight()) {
 			this.product[i] = p;
@@ -44,6 +47,10 @@ class Shop {
 				}
 			}	
 		}
+	}
+	public String toString() {
+		return ("MostExpensive = " + getMostExpensive() + "\nTotalWeight = " + getTotalWeight() + 
+				"\nMoney = " + getMoney() + "\nProducts from RU " + getCountM());
 	}
 
 }
