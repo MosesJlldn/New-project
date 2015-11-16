@@ -72,6 +72,6 @@ class Food {
 	public String toString() {
 		return ("Name:" + getName() + "." + "\nVolume:" + getVolume() + "." +
 				"\nFats:" + getFats() + "." + "\nProteins:" + getProteins() + "." + 
-				"\nBestUntil:" + getBestUntil() + "." + "\nHealthy:" + getHealthy() + ".");
+				"\nBestUntil:" + getBestUntil().getTime() + "." + "\nHealthy:" + getHealthy() + ".");
 	}
 }
