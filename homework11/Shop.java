@@ -32,14 +32,14 @@ class Shop {
 			this.product[i] = p;
 			this.totalWeight += p.getWeight();
 			this.money -= p.getPrice();
-			if (p.getManufacturer() = "RU") {
+			if (p.getManufacturer() == "RU") {
 				countM++;
 			}
 			if (this.mostExpensive == null) {
 				this.mostExpensive = p;
 			}
 			else {
-				if (p.getMoney() > this.mostExpensive.getPrice()) {
+				if (p.getPrice() > this.mostExpensive.getPrice()) {
 					this.mostExpensive = p;
 				}
 			}	
