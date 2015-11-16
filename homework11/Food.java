@@ -1,17 +1,17 @@
-import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 class Food {
 	private String name;
 	private final double fats;
 	private final double proteins;
 	private final double volume;
-	private final Calendar bestUntil;
-	public Food(String name, double fats, double proteins, double volume, Calendar bestUntil) {
+	private final GregorianCalendar bestUntil;
+	public Food(String name, double fats, double proteins, double volume, GregorianCalendar bestUntil) {
 		this.setName(name);
 		this.fats = fats;
 		this.proteins = proteins;
 		this.volume = volume;
-		this.bestUntil = bestUntil;
+		this.bestUntil = (GregorianCalendar)bestUntil.clone();
 	}
 	public void setName(String name) {
 		this.name = name;
@@ -28,12 +28,21 @@ class Food {
 	public double getVolume() {
 		return volume;
 	}
-	public Calendar getBestUntil() {
+	public GregorianCalendar getBestUntil() {
 		return bestUntil;
 	}
 	public boolean getFresh() {
-		Calendar current = Calendar.getInstance();
-		return (this.getBestUntil().before(current));
+		GregorianCalendar current = new GregorianCalendar();
+		return (this.getBestUntil().after(current));
+	}
+	public boolean getHealthy() {
+		if ((fats / volume) > 0.5) {
+			return false;
+		}
+		if ((proteins / volume) < 0.25) {
+			return false;
+		}
+		return true;
 	}
 	public boolean equals(Object o) {
 		if (o == null)
@@ -63,6 +72,6 @@ class Food {
 	public String toString() {
 		return ("Name:" + getName() + "." + "\nVolume:" + getVolume() + "." +
 				"\nFats:" + getFats() + "." + "\nProteins:" + getProteins() + "." + 
-				"\nFresh:" + getFresh() + ".");
+				"\nBestUntil:" + getBestUntil() + "." + "\nHealthy:" + getHealthy() + ".");
 	}
 }
